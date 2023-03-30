@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <h1>ganti isi</h1>
+    <script>
+      const url = 'https://script.google.com/macros/s/AKfycbw_bQwcex9uhl4fIn1txwJjvLZaSVv6quDZP_oBXlr8j5PoJ_HbbR3POeSbReRDBlXr/exec'
+      fetch(url, {
+        method: 'post',
+        body: JSON.stringify(data)
+      })
+      .then(res => {
+        return res.json()
+      })
+      .then(res2 => {
+        console.log(res2)
+      })
+    </script>
+  </body>
+</html>
