@@ -13,24 +13,29 @@
         <td><textarea id="pesan"></textarea></td>
       </tr>
     </table>
-    <button id="kirim">KIRIM</button>
+    <button id="kirim" onclick="kirim()">KIRIM</button>
     <h1>ganti isi</h1>
 
     <script>
       const url = 'https://script.google.com/macros/s/AKfycbw_bQwcex9uhl4fIn1txwJjvLZaSVv6quDZP_oBXlr8j5PoJ_HbbR3POeSbReRDBlXr/exec'
-      let nama = document.getElementById("nama").value
-      let pesan = document.getElementById("pesan").value
-      let data = {"nama": nama, "pesan": pesan}
-      fetch(url, {
-        method: 'post',
-        body: JSON.stringify(data)
-      })
-      .then(res => {
-        return res.json()
-      })
-      .then(res2 => {
-        console.log(res2)
-      })
+      
+      function kirim(){
+        let nama = document.getElementById("nama").value
+        let pesan = document.getElementById("pesan").value
+        let kirim = document.getElementById("kirim")
+        let data = {"nama": nama, "pesan": pesan}
+      
+        fetch(url, {
+          method: 'post',
+          body: JSON.stringify(data)
+        })
+        .then(res => {
+          return res.json()
+        })
+        .then(res2 => {
+          console.log(res2)
+        })
+      }
     </script>
   </body>
 </html>
