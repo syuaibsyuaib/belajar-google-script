@@ -14,9 +14,10 @@
       </tr>
     </table>
     <button id="kirim" onclick="kirim()">KIRIM</button>
-    <h1>ganti isi</h1>
 
-    <script>
+<p>setelah pesan terkirim, maka akan terekam di google sheets pada link berikut:</p>
+<a href="https://docs.google.com/spreadsheets/d/1BZ5SuH9WUUmnLtaS9oobYS3h-x27ikSuYCHCdEMVdIw/edit#gid=0">Database Spreadsheet</a>
+<script>
       const url = 'https://script.google.com/macros/s/AKfycbw_bQwcex9uhl4fIn1txwJjvLZaSVv6quDZP_oBXlr8j5PoJ_HbbR3POeSbReRDBlXr/exec'
       
       function kirim(){
@@ -34,6 +35,7 @@
         })
         .then(res2 => {
           console.log(res2)
+          alert("tersimpan")
         })
       }
     </script>
