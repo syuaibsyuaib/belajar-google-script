@@ -4,18 +4,23 @@
       <tr>
         <td>Nama Pengirim<td>
         <td>:</td>
-        <td><input type="text"></input></td>
+        <td><input type="text" id="nama"></input></td>
       </tr>
       
       <tr>
         <td>Pesan<td>
         <td>:</td>
-        <td><textarea></textarea></td>
+        <td><textarea id="pesan"></textarea></td>
       </tr>
     </table>
+    <button id="kirim">KIRIM</button>
     <h1>ganti isi</h1>
+
     <script>
       const url = 'https://script.google.com/macros/s/AKfycbw_bQwcex9uhl4fIn1txwJjvLZaSVv6quDZP_oBXlr8j5PoJ_HbbR3POeSbReRDBlXr/exec'
+      let nama = document.getElementById("nama").value
+      let pesan = document.getElementById("pesan").value
+      let data = {"nama": nama, "pesan": pesan}
       fetch(url, {
         method: 'post',
         body: JSON.stringify(data)
