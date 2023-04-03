@@ -39,6 +39,9 @@
         })
         .then(res2 => {
           console.log(res2)
+          let d = new Date()
+          let exp = new Date(d.setHours(d.getHours() + 2))
+          document.cookie = `id=${res2}; expires=${exp}`;
           alert("tersimpan")
         })
       }
